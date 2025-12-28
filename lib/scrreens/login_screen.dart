@@ -1,5 +1,6 @@
 import 'package:catalog_app/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -39,20 +40,31 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).canvasColor,
       body: SingleChildScrollView(
         child: Form(
           key: _formKey,
           child: Column(
             children: [
-              SizedBox(height: 80),
-              Image.asset("assets/images/login-image.png", fit: BoxFit.cover),
-              SizedBox(height: 20),
+              SizedBox(height: 300),
               Text(
-                "Welcome $username",
-                style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
+                "Welcome!",
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 40,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 4),
+              Text(
+                "Please enter your username and password",
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.symmetric(
                   vertical: 16,
@@ -61,7 +73,25 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   children: [
                     TextFormField(
+                      style: TextStyle(color: Theme.of(context).primaryColor),
                       decoration: InputDecoration(
+                        prefixIconColor: Theme.of(context).primaryColor,
+                        suffixIconColor: Theme.of(context).primaryColor,
+                        focusColor: Theme.of(context).primaryColor,
+                        labelStyle: TextStyle(
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Theme.of(context).primaryColor,
+                            width: 2,
+                          ),
+                        ),
                         label: Text("Username"),
                         prefixIcon: Icon(Icons.person_2_outlined),
                       ),
@@ -71,16 +101,29 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                         return null;
                       },
-                      onChanged: (value) {
-                        setState(() {
-                          username = value;
-                        });
-                      },
                     ),
-                    SizedBox(height: 12),
+                    SizedBox(height: 18),
                     TextFormField(
                       obscureText: !_passwordVisible,
+                      style: TextStyle(color: Theme.of(context).primaryColor),
                       decoration: InputDecoration(
+                        prefixIconColor: Theme.of(context).primaryColor,
+                        suffixIconColor: Theme.of(context).primaryColor,
+                        focusColor: Theme.of(context).primaryColor,
+                        labelStyle: TextStyle(
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Theme.of(context).primaryColor,
+                            width: 2,
+                          ),
+                        ),
                         label: Text("Password"),
                         prefixIcon: Icon(Icons.password_outlined),
                         suffixIcon: IconButton(
@@ -132,12 +175,23 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(height: 8),
                     Row(
                       children: [
-                        Text("New here?"),
-                        TextButton(
-                          onPressed: () {
+                        Text(
+                          "New here?",
+                          style: TextStyle(
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ),
+                        SizedBox(width: 4),
+                        GestureDetector(
+                          onTap: () {
                             Navigator.pushNamed(context, MyRoutes.signupRoute);
                           },
-                          child: Text("Create Account"),
+                          child: Text(
+                            "Create Account",
+                            style: TextStyle(
+                              color: Theme.of(context).highlightColor,
+                            ),
+                          ),
                         ),
                       ],
                     ),
