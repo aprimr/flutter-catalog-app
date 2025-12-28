@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:catalog_app/models/catalog.dart';
-import 'package:catalog_app/utils/theme.dart';
 import 'package:catalog_app/widgets/drawer.dart';
 import 'package:catalog_app/widgets/home_page_widgets/app_header.dart';
 import 'package:catalog_app/widgets/home_page_widgets/catalog_list.dart';
@@ -39,7 +38,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.creamColor,
+      backgroundColor: Theme.of(context).canvasColor,
       body: SafeArea(
         child: Container(
           padding: Vx.mOnly(top: 32, left: 30, right: 30, bottom: 2),
@@ -50,7 +49,7 @@ class _HomeState extends State<Home> {
               if (CatalogModal.items.isNotEmpty)
                 CatalogList().expand()
               else
-                Loading(title: "Loading..."),
+                Loading(title: "Loading...", subTitle: "hasid"),
             ],
           ),
         ),

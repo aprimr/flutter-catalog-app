@@ -28,7 +28,7 @@ class CatalogItem extends StatelessWidget {
                 spacing: 5.0,
                 children: [
                   catalog.name.text.lg
-                      .color(AppTheme.darkBlueishColor)
+                      .color(Theme.of(context).primaryColor)
                       .bold
                       .make(),
                   catalog.desc.text.medium.medium
@@ -39,7 +39,7 @@ class CatalogItem extends StatelessWidget {
                     spacing: 10,
                     children: [
                       "\$${catalog.price}".text.xl
-                          .color(AppTheme.darkBlueishColor)
+                          .color(Theme.of(context).primaryColor)
                           .bold
                           .make(),
                       ElevatedButton(
@@ -47,13 +47,15 @@ class CatalogItem extends StatelessWidget {
                         style: ButtonStyle(
                           elevation: WidgetStatePropertyAll(0),
                           backgroundColor: WidgetStatePropertyAll(
-                            AppTheme.darkBlueishColor,
+                            Theme.of(context).highlightColor,
                           ),
                           foregroundColor: WidgetStatePropertyAll(
                             AppTheme.creamColor,
                           ),
                         ),
-                        child: "Add to cart".text.bold.lg.make(),
+                        child: "Add to cart".text.bold.lg
+                            .color(Theme.of(context).cardColor)
+                            .make(),
                       ),
                     ],
                   ),
@@ -63,6 +65,6 @@ class CatalogItem extends StatelessWidget {
           ),
         ],
       ),
-    ).white.roundedSM.square(150).make().py16();
+    ).color(Theme.of(context).cardColor).rounded.square(150).make().py16();
   }
 }

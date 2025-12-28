@@ -12,7 +12,7 @@ class AppDrawer extends StatelessWidget {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLeASuSCE7fb-i4EYnnc5gtWXA6lwtDyBf9g&s";
 
     return Drawer(
-      backgroundColor: AppTheme.whiteColor,
+      backgroundColor: Theme.of(context).canvasColor,
       child: SafeArea(
         child: Column(
           children: [
@@ -25,7 +25,7 @@ class AppDrawer extends StatelessWidget {
                     padding: const EdgeInsets.all(2),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.white,
+                      color: Theme.of(context).primaryColor,
                     ),
                     child: const CircleAvatar(
                       radius: 30,
@@ -41,7 +41,7 @@ class AppDrawer extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
-                          color: AppTheme.darkBlueishColor,
+                          color: Theme.of(context).primaryColor,
                         ),
                       ),
                       SizedBox(height: 4),
@@ -49,7 +49,7 @@ class AppDrawer extends StatelessWidget {
                         "aprimregmi24@gmail.com",
                         style: TextStyle(
                           fontSize: 13,
-                          color: AppTheme.darkBlueishColor,
+                          color: Theme.of(context).primaryColor,
                         ),
                       ),
                     ],
@@ -65,6 +65,7 @@ class AppDrawer extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 8),
                 children: [
                   _drawerItem(
+                    context: context,
                     icon: CupertinoIcons.home,
                     title: "Home",
                     onTap: () {
@@ -72,6 +73,7 @@ class AppDrawer extends StatelessWidget {
                     },
                   ),
                   _drawerItem(
+                    context: context,
                     icon: CupertinoIcons.cart,
                     title: "My Cart",
                     onTap: () {
@@ -79,6 +81,7 @@ class AppDrawer extends StatelessWidget {
                     },
                   ),
                   _drawerItem(
+                    context: context,
                     icon: CupertinoIcons.heart,
                     title: "Wishlist",
                     onTap: () {
@@ -86,6 +89,7 @@ class AppDrawer extends StatelessWidget {
                     },
                   ),
                   _drawerItem(
+                    context: context,
                     icon: CupertinoIcons.gear,
                     title: "Settings",
                     onTap: () {
@@ -93,6 +97,7 @@ class AppDrawer extends StatelessWidget {
                     },
                   ),
                   _drawerItem(
+                    context: context,
                     icon: CupertinoIcons.info,
                     title: "About",
                     onTap: () {
@@ -103,6 +108,7 @@ class AppDrawer extends StatelessWidget {
                   const Divider(height: 32),
 
                   _drawerItem(
+                    context: context,
                     icon: Icons.logout,
                     title: "Logout",
                     isLogout: true,
@@ -120,6 +126,7 @@ class AppDrawer extends StatelessWidget {
   }
 
   Widget _drawerItem({
+    required BuildContext context,
     required IconData icon,
     required String title,
     required VoidCallback onTap,
@@ -129,14 +136,14 @@ class AppDrawer extends StatelessWidget {
       onTap: onTap,
       leading: Icon(
         icon,
-        color: isLogout ? Colors.redAccent : AppTheme.darkBlueishColor,
+        color: isLogout ? Colors.redAccent : Theme.of(context).primaryColor,
       ),
       title: Text(
         title,
         style: TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.w500,
-          color: isLogout ? Colors.redAccent : Colors.black87,
+          color: isLogout ? Colors.redAccent : Theme.of(context).primaryColor,
         ),
       ),
       trailing: Icon(

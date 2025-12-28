@@ -2,19 +2,19 @@
   "products": [
     {
       "id": 1,
-      "name": "iPhone 12 Pro",
-      "desc": "Apple iPhone 12th generation",
-      "price": 999,
+      "name": "iPhone 15 Pro",
+      "desc": "Apple iPhone 13th generation",
+      "price": 1449,
       "color": "#33505a",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc"
+      "image": "https://pngimg.com/uploads/iphone_12/small/iphone_12_PNG31.png"
     },
     {
       "id": 2,
-      "name": "Pixel 5",
-      "desc": "Google Pixel phone 5th generation",
+      "name": "Galaxy Z-Flip",
+      "desc": "Samsung Galaxy Z Flip Phone",
       "price": 699,
       "color": "#00ac51",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0JhwLvm_uLDLc-la7hK9WyVpe9naJFcebKfhcICiq2KtvXDePNAU_9QO06LPcQ0K0fLByc7m&usqp=CAc"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Galaxy_Z_Flip.png/1200px-Galaxy_Z_Flip.png"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "desc": "Apple Macbook air with apple silicon",
       "price": 1099,
       "color": "#e0bfae",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOMstwtmLnjFb3NHiDJ_kcQnueNVH-rv_3ps96HZmXlFumKWaiBqq_L4Uoyx3iFiNTrXNEbyB&usqp=CAc"
+      "image": "https://pngimg.com/uploads/macbook/small/macbook_PNG101753.png"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "desc": "Sony Playstation 5th generation",
       "price": 500,
       "color": "#544ee4",
-      "image": "https://media.direct.playstation.com/is/image/psdglobal/2025-PS5-Digital-Hero-1-console-dualsense"
+      "image": "https://www.pngall.com/wp-content/uploads/14/PS5-Transparent.png"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "desc": "Apple Aipods Pro 1st generation",
       "price": 200,
       "color": "#e3e4e9",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROEs084z65psoo06zYl5R0tUzywOVKVQZzmzqCj3PDP1vVJTWv3gGwGMFENSy4qV4n7sEQjE&usqp=CAc"
+      "image": "https://parspng.com/wp-content/uploads/2023/08/airpodspng.parspng.com-4-600x600.png"
     },
     {
       "id": 6,
@@ -46,23 +46,23 @@
       "desc": "Apple iPad Pro 2020 edition",
       "price": 799,
       "color": "#f73984",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNzUeRQ5uH7E3hpECib8qxdhfHv6SnUGT7mOsew_xiOoqRR7ZpdH-TQ4J6-HuIEfqHimYyPXWH&usqp=CAc"
+      "image": "https://www.pngarts.com/files/5/IPad-Free-PNG-Image.png"
     },
     {
       "id": 7,
-      "name": "Galaxy S21 Ultra",
-      "desc": "Samsung Galaxy S21 Ultra 2021 edition",
+      "name": "Legion 9i",
+      "desc": "Legion 9i Gen 10 (18″ Intel)",
       "price": 1299,
       "color": "#1c1c1c",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT_PZcc0wicVYR992s5QCIDLYy8t-z-9kibTUdWZBN2sd86aaqdAJfhvxAwZNWV9wfdzDikpr1&usqp=CAc"
+      "image": "https://p2-ofp.static.pub/ShareResource/ww/landing-pages/legion-brand-2025/Agnostic-version/img/lenovo-legion-91-gen-10-front-back-img.png"
     },
     {
       "id": 8,
-      "name": "Galaxy S21",
-      "desc": "Samsung Galaxy S21 2021 edition",
+      "name": "Lenovo Legion Go",
+      "desc": "Lenovo Legion Go Gen 2 (8.8″)",
       "price": 899,
       "color": "#7c95eb",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNHd7FwarbxA1xdMFt24KazjcR4dWPH_t_T5dz4YNK1s7rJAQ8gOIuR_NRw6eeiQgFhbZ9sAN&usqp=CAc"
+      "image": "https://p4-ofp.static.pub/ShareResource/ww/landing-pages/legion-brand-2025/Agnostic-version/img/lenovo-legion-go-gen-2-img.png"
     }
   ]
 }

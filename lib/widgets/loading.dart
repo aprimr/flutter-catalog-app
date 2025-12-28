@@ -16,13 +16,15 @@ class Loading extends StatelessWidget {
         child: Column(
           spacing: 20.0,
           children: [
-            CircularProgressIndicator(color: AppTheme.darkBlueishColor),
+            CircularProgressIndicator(color: Theme.of(context).primaryColor),
             Column(
               children: [
-                title.text.medium.xl.color(AppTheme.darkBlueishColor).make(),
+                title.text.medium.xl
+                    .color(Theme.of(context).primaryColor)
+                    .make(),
                 if (subTitle.isNotBlank)
                   subTitle.text.medium.lg
-                      .color(AppTheme.darkBlueishColor)
+                      .color(Theme.of(context).primaryColor)
                       .make(),
               ],
             ),

@@ -1,4 +1,3 @@
-import 'package:catalog_app/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -14,17 +13,25 @@ class AppHeader extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            "Catalog App".text.xl5.bold.color(AppTheme.darkBlueishColor).make(),
+            "Catalog App".text.xl5.bold
+                .color(Theme.of(context).primaryColor)
+                .make(),
             IconButton(
               onPressed: () {
                 Scaffold.of(context).openEndDrawer();
               },
-              icon: Icon(Icons.menu, size: 42),
+              icon: Icon(
+                Icons.menu,
+                size: 42,
+                color: Theme.of(context).highlightColor,
+              ),
             ),
           ],
         ),
 
-        "Trending Products".text.xl.make(),
+        "Trending Products".text.xl2
+            .color(Theme.of(context).highlightColor)
+            .make(),
         SizedBox(height: 10),
       ],
     );
