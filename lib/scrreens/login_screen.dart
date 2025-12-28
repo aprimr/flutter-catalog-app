@@ -1,6 +1,5 @@
 import 'package:catalog_app/utils/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
