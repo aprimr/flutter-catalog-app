@@ -24,7 +24,7 @@ class Loading extends StatelessWidget {
                     .make(),
                 if (subTitle.isNotBlank)
                   subTitle.text.medium.lg
-                      .color(Theme.of(context).primaryColor)
+                      .color(AppTheme.darkBlueishColor)
                       .make(),
               ],
             ),
