@@ -11,6 +11,7 @@ class AppTheme {
     highlightColor: darkBlueishColor,
     hintColor: whiteColor,
     hoverColor: creamColor,
+    focusColor: darkBlueishColor,
     appBarTheme: AppBarTheme(
       backgroundColor: creamColor,
       foregroundColor: darkBlueishColor,
@@ -27,6 +28,7 @@ class AppTheme {
     highlightColor: whiteColor,
     hintColor: whiteColor,
     hoverColor: darkBgColor,
+    focusColor: grayColor,
     appBarTheme: AppBarTheme(
       backgroundColor: darkBgColor,
       foregroundColor: whiteColor,
@@ -41,4 +43,6 @@ class AppTheme {
   static Color darkBlueishColor = Color(0xFF2A273A);
   static Color grayColor = Color(0xFF9E9E9E);
   static Color whiteColor = Color(0xFFFFFFFF);
+
+  // Google Fonts
 }
