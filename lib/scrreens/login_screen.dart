@@ -171,29 +171,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 8),
-                    Row(
-                      children: [
-                        Text(
-                          "New here?",
-                          style: TextStyle(
-                            color: Theme.of(context).primaryColor,
-                          ),
-                        ),
-                        SizedBox(width: 4),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.pushNamed(context, MyRoutes.signupRoute);
-                          },
-                          child: Text(
-                            "Create Account",
-                            style: TextStyle(
-                              color: Theme.of(context).highlightColor,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
                   ],
                 ),
               ),

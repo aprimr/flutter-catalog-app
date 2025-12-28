@@ -12,7 +12,8 @@ class AppTheme {
     hintColor: whiteColor,
     hoverColor: creamColor,
     appBarTheme: AppBarTheme(
-      backgroundColor: whiteColor,
+      backgroundColor: creamColor,
+      foregroundColor: darkBlueishColor,
       elevation: 0,
       iconTheme: IconThemeData(color: darkBlueishColor),
     ),
@@ -27,9 +28,10 @@ class AppTheme {
     hintColor: whiteColor,
     hoverColor: darkBgColor,
     appBarTheme: AppBarTheme(
-      backgroundColor: whiteColor,
+      backgroundColor: darkBgColor,
+      foregroundColor: whiteColor,
       elevation: 0,
-      iconTheme: IconThemeData(color: darkBlueishColor),
+      iconTheme: IconThemeData(color: whiteColor),
     ),
   );
 

@@ -77,7 +77,8 @@ class AppDrawer extends StatelessWidget {
                     icon: CupertinoIcons.cart,
                     title: "My Cart",
                     onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.homeRoute);
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, MyRoutes.cartRoute);
                     },
                   ),
                   _drawerItem(
