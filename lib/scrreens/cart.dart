@@ -1,3 +1,4 @@
+import 'package:catalog_app/models/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -24,6 +25,7 @@ class MyCart extends StatelessWidget {
 }
 
 class _CartTotal extends StatelessWidget {
+  final _cart = CartModal();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,7 +44,7 @@ class _CartTotal extends StatelessWidget {
               "Total Price".text.bold
                   .color(Theme.of(context).primaryColor)
                   .make(),
-              "\$ 999".text.xl3.semiBold.green600.make(),
+              "\$ ${_cart.totalPrice}".text.xl3.semiBold.green600.make(),
             ],
           ),
           // Buy Now Btn
@@ -98,36 +100,65 @@ class _CartList extends StatefulWidget {
 }
 
 class __CartListState extends State<_CartList> {
+  final _cart = CartModal();
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 5,
-      itemBuilder: (context, index) => ListTile(
-        contentPadding: EdgeInsets.symmetric(horizontal: 6, vertical: 6),
-        leading: Container(
-          padding: EdgeInsets.all(6),
-          decoration: BoxDecoration(
-            color: Theme.of(context).cardColor,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Image.network(
-            "https://pngimg.com/uploads/macbook/small/macbook_PNG101753.png",
-          ),
-        ),
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            "This is title.".text.semiBold
-                .color(Theme.of(context).primaryColor)
-                .make(),
-            "\$ 9999".text.xl.bold.color(Theme.of(context).focusColor).make(),
-          ],
-        ),
-        trailing: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.cancel_outlined),
-        ),
-      ),
-    );
+    return _cart.items.isEmpty
+        ? Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.production_quantity_limits_rounded,
+                  color: Theme.of(context).primaryColor,
+                  size: 58,
+                ),
+                SizedBox(height: 8),
+                Text(
+                  "Cart is empty.",
+                  style: TextStyle(
+                    color: Theme.of(context).focusColor,
+                    fontSize: 20,
+                  ),
+                ),
+              ],
+            ),
+          )
+        : ListView.builder(
+            itemCount: _cart.items.length,
+            itemBuilder: (context, index) => ListTile(
+              contentPadding: EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+              leading: Container(
+                padding: EdgeInsets.all(6),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).cardColor,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Image.network(
+                  _cart.items[index].image,
+                  width: 80.0,
+                  height: double.infinity,
+                ),
+              ),
+              title: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _cart.items[index].name.text.semiBold
+                      .color(Theme.of(context).primaryColor)
+                      .make(),
+                  "\$${_cart.items[index].price}".text.xl.bold
+                      .color(Theme.of(context).focusColor)
+                      .make(),
+                ],
+              ),
+              trailing: IconButton(
+                onPressed: () {
+                  _cart.removeItem(_cart.items[index]);
+                  setState(() {});
+                },
+                icon: Icon(Icons.cancel_outlined),
+              ),
+            ),
+          );
   }
 }

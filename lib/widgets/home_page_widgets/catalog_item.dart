@@ -1,6 +1,8 @@
+import 'package:catalog_app/models/cart.dart';
 import 'package:catalog_app/models/catalog.dart';
 import 'package:catalog_app/utils/theme.dart';
 import 'package:catalog_app/widgets/home_page_widgets/catalog_image.dart';
+import 'package:catalog_app/widgets/ui/add_to_cart_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -42,21 +44,7 @@ class CatalogItem extends StatelessWidget {
                           .color(Theme.of(context).primaryColor)
                           .bold
                           .make(),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                          elevation: WidgetStatePropertyAll(0),
-                          backgroundColor: WidgetStatePropertyAll(
-                            Theme.of(context).highlightColor,
-                          ),
-                          foregroundColor: WidgetStatePropertyAll(
-                            AppTheme.creamColor,
-                          ),
-                        ),
-                        child: "Add to cart".text.bold.lg
-                            .color(Theme.of(context).cardColor)
-                            .make(),
-                      ),
+                      AddToCartBtn(catalog: catalog),
                     ],
                   ),
                 ],

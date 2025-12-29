@@ -1,6 +1,10 @@
 import 'package:catalog_app/models/catalog.dart';
 
 class CartModal {
+  static final cartModal = CartModal._internal();
+  CartModal._internal();
+  factory CartModal() => cartModal;
+
   late CatalogModal _catalog;
 
   // list of item ids in cart
