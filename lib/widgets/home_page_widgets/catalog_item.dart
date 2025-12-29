@@ -1,4 +1,3 @@
-import 'package:catalog_app/models/cart.dart';
 import 'package:catalog_app/models/catalog.dart';
 import 'package:catalog_app/utils/theme.dart';
 import 'package:catalog_app/widgets/home_page_widgets/catalog_image.dart';
