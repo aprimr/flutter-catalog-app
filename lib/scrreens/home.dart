@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:catalog_app/models/cart.dart';
 import 'package:catalog_app/models/catalog.dart';
 import 'package:catalog_app/utils/routes.dart';
 import 'package:catalog_app/widgets/drawer.dart';
@@ -22,6 +23,8 @@ class _HomeState extends State<Home> {
     super.initState();
     loadData();
   }
+
+  final _cart = CartModal();
 
   Future<void> loadData() async {
     await Future.delayed(Duration(seconds: 2));
@@ -60,10 +63,11 @@ class _HomeState extends State<Home> {
         foregroundColor: Theme.of(context).hoverColor,
         shape: StadiumBorder(),
         elevation: 0.5,
-        onPressed: () {
+
+        onPressed: () { 
           Navigator.pushNamed(context, MyRoutes.cartRoute);
         },
-        child: Icon(Icons.shopping_cart_rounded),
+        child: Icon(Icons.shopping_cart_outlined),
       ),
       endDrawer: AppDrawer(),
       endDrawerEnableOpenDragGesture: false,
