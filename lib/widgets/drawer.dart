@@ -37,7 +37,7 @@ class AppDrawer extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Aprim Regmi",
+                        "Aprim",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
@@ -46,7 +46,7 @@ class AppDrawer extends StatelessWidget {
                       ),
                       SizedBox(height: 4),
                       Text(
-                        "aprimregmi24@gmail.com",
+                        "_aprimr",
                         style: TextStyle(
                           fontSize: 13,
                           color: Theme.of(context).primaryColor,

@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:catalog_app/models/catalog.dart';
+import 'package:catalog_app/utils/routes.dart';
 import 'package:catalog_app/widgets/drawer.dart';
 import 'package:catalog_app/widgets/home_page_widgets/app_header.dart';
 import 'package:catalog_app/widgets/home_page_widgets/catalog_list.dart';
@@ -53,6 +54,16 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Theme.of(context).primaryColor,
+        foregroundColor: Theme.of(context).hoverColor,
+        shape: StadiumBorder(),
+        elevation: 0.5,
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.cartRoute);
+        },
+        child: Icon(Icons.shopping_cart_rounded),
       ),
       endDrawer: AppDrawer(),
       endDrawerEnableOpenDragGesture: false,
