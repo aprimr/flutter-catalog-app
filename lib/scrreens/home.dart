@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
               if (CatalogModal.items.isNotEmpty)
                 CatalogList().expand()
               else
-                Loading(title: "Loading...", subTitle: "hasid"),
+                Loading(title: "Loading..."),
             ],
           ),
         ),
